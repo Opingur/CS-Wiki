@@ -4,9 +4,10 @@ public class Sort {
     /** Sorts strings destructively. */
     public static int findSmallest(String[] s, int start) {
         String smallest = s[start];
-        int smallestIndex = 0;
+        int smallestIndex = start;
         for (int i = start; i < s.length; i++) {
             if (s[i].compareTo(smallest) < 0) {
+                smallest = s[i];
                 smallestIndex = i;
             }
         }
